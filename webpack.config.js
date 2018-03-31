@@ -11,7 +11,8 @@ const VENDOR_LIBS =[
     //  "angular-aria",
     //  "angular-animate",
      "angular-sanitize",
-     "angular-messages"
+     "angular-messages",
+    "angular-material-data-table'"
 ]
 
 module.exports = {

@@ -2,11 +2,39 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
-app.use(express.static(path.resolve(__dirname, "../public")));
 
-app.get("/api/isAdmin", (req, res) =>{
-    res.send(true)
+
+app.get("/api/users", (req, res) =>{
+    res.send([
+        {
+            name:"AVipin",
+            company:"ABC"
+        },
+        {
+            name:"BVipin",
+            company:"ABC"
+        },
+        {
+            name:"CVipin",
+            company:"ABC"
+        },
+        {
+            name:"DVipin",
+            company:"ABC"
+        },{
+            name:"ZVipin",
+            company:"ABC"
+        },
+        {
+            name:"Vipin",
+            company:"ABC"
+        },
+        {
+            name:"Vipin",
+            company:"ABC"
+        }])
 });
+app.use(express.static(path.resolve(__dirname, "../public")));
 
 app.use("*",function(req, res) {
     // Use res.sendfile, as it streams instead of reading the file into memory.
