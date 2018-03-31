@@ -7,42 +7,10 @@
     <title>Angular App</title>
     <base href="/">
 </head>
-<body ng-controller="rootController as root">
-        <!-- Container #1 (see wireframe) -->
-        <md-toolbar layout="row" class="md-toolbar-tools">
-            <h1>Angular Material - Starter App</h1>
-          </md-toolbar>
-      
-          <!-- Container #2 -->
-          <div flex layout="row">
-      
-            <!-- Container #3 -->
-            <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
-     
-            </md-sidenav>
-      
-            <!-- Container #4 -->
-            <md-content flex id="content">
-   
-              <form name="root.clientForm">
-                  <md-input-container>
-                      <label>Username</label>
-                      <input type="text" name="username" ng-model="username" required/>
-                        <div ng-messages="root.clientForm.username.$error">
-                          <div ng-message="required">
-                            This field is required.
-                          </div>
-                        </div>
-                    </md-input-container>
-              </form>
-              <md-button class="md-primary md-raised" ng-click="root.showTabDialog($event)" >
-                  Tab Dialog
-                </md-button>
-            </md-content>
-      
-          </div>
-      
- {{root.method}}
-
+<body>
+    <md-toolbar layout="row" class="md-toolbar-tools">
+        <h1>Angular Material - Starter App</h1>
+      </md-toolbar>
+  <div ui-view></div>
 </body>
 </html>

@@ -8,7 +8,7 @@ app.get("/api/isAdmin", (req, res) =>{
     res.send(true)
 });
 
-app.use(function(req, res) {
+app.use("*",function(req, res) {
     // Use res.sendfile, as it streams instead of reading the file into memory.
     res.sendFile(path.resolve(__dirname, '../public/index.html'));
   });

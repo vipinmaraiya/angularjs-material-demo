@@ -153,34 +153,12 @@
 "use strict";
 
 
-__webpack_require__(88);
+__webpack_require__(89);
 module.exports = angular;
 
 /***/ }),
 
-/***/ 19:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(83);
-module.exports = 'ngAnimate';
-
-/***/ }),
-
-/***/ 28:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(84);
-module.exports = 'ngAria';
-
-/***/ }),
-
-/***/ 29:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -190,14 +168,36 @@ module.exports = 'ngAria';
 __webpack_require__(10);
 
 // Load Angular and dependent libs
-__webpack_require__(19);
-__webpack_require__(28);
+__webpack_require__(58);
+__webpack_require__(59);
 
 // Now load Angular Material
-__webpack_require__(85);
+__webpack_require__(86);
 
 // Export namespace
 module.exports = 'ngMaterial';
+
+/***/ }),
+
+/***/ 28:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(87);
+module.exports = 'ngMessages';
+
+/***/ }),
+
+/***/ 29:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(88);
+module.exports = 'ngSanitize';
 
 /***/ }),
 
@@ -207,34 +207,34 @@ module.exports = 'ngMaterial';
 "use strict";
 
 
-__webpack_require__(86);
-module.exports = 'ngMessages';
-
-/***/ }),
-
-/***/ 31:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(87);
-module.exports = 'ngSanitize';
-
-/***/ }),
-
-/***/ 32:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(89);
+__webpack_require__(90);
 module.exports = 'ui.select';
 
 /***/ }),
 
-/***/ 83:
+/***/ 58:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(84);
+module.exports = 'ngAnimate';
+
+/***/ }),
+
+/***/ 59:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(85);
+module.exports = 'ngAria';
+
+/***/ }),
+
+/***/ 84:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4334,7 +4334,7 @@ module.exports = 'ui.select';
 
 /***/ }),
 
-/***/ 84:
+/***/ 85:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4725,7 +4725,7 @@ module.exports = 'ui.select';
 
 /***/ }),
 
-/***/ 85:
+/***/ 86:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16783,7 +16783,7 @@ scope.$on('$destroy',function(){disconnect();});}};}})();(function(){"use strict
 
 /***/ }),
 
-/***/ 86:
+/***/ 87:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17528,7 +17528,7 @@ scope.$on('$destroy',function(){disconnect();});}};}})();(function(){"use strict
 
 /***/ }),
 
-/***/ 87:
+/***/ 88:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18292,7 +18292,7 @@ scope.$on('$destroy',function(){disconnect();});}};}})();(function(){"use strict
 
 /***/ }),
 
-/***/ 88:
+/***/ 89:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36647,7 +36647,7 @@ bindJQuery();publishExternalAPI(angular);angular.module("ngLocale",[],["$provide
 
 /***/ }),
 
-/***/ 89:
+/***/ 90:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39040,12 +39040,10 @@ angular.module("ui.select").run(["$templateCache", function ($templateCache) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(10);
+__webpack_require__(27);
+__webpack_require__(30);
 __webpack_require__(29);
-__webpack_require__(32);
-__webpack_require__(28);
-__webpack_require__(19);
-__webpack_require__(31);
-module.exports = __webpack_require__(30);
+module.exports = __webpack_require__(28);
 
 
 /***/ })
