@@ -11511,17 +11511,54 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var RootController = exports.RootController = function RootController(appService, q, timeout) {
-    _classCallCheck(this, RootController);
+var RootController = exports.RootController = function () {
+    function RootController(appService, mdDialog) {
+        _classCallCheck(this, RootController);
 
-    this.appService = appService;
-    this.app = "app works!";
-    this.availableColors = ["Red", "Green", "Blue"];
-};
+        this.mdDialog = mdDialog;
+        this.appService = appService;
+        this.app = "app works!";
+        this.availableColors = ["Red", "Green", "Blue"];
+    }
 
-RootController.$inject = ["appService", "$q", "$timeout"];
+    _createClass(RootController, [{
+        key: "showTabDialog",
+        value: function showTabDialog(ev) {
+            var _this = this;
+
+            this.method = "addUser";
+            this.param = 2;
+            this.mdDialog.show({
+                controller: function controller() {
+                    return _this;
+                },
+                controllerAs: 'root',
+                templateUrl: 'dialog/tabDialog.tmpl.html',
+                parent: angular.element(document.body),
+                targetEvent: ev,
+                clickOutsideToClose: true
+            }).then(function (answer) {
+                console.log(answer);
+                //this.status = 'You said the information was "' + answer + '".';
+            }, function () {
+                //this.status = 'You cancelled the dialog.';
+            });
+        }
+    }, {
+        key: "addUser",
+        value: function addUser(id) {
+            console.log(id);
+        }
+    }]);
+
+    return RootController;
+}();
+
+RootController.$inject = ["appService", "$mdDialog"];
 
 /***/ }),
 /* 93 */
