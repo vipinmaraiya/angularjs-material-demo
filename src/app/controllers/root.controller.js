@@ -29,6 +29,9 @@ export class RootController{
       addUser(id){
           console.log(id);
       }
+      cancel(){
+          this.mdDialog.hide();
+      }
 }
 
 RootController.$inject = ["appService", "$mdDialog"];

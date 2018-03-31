@@ -11553,6 +11553,11 @@ var RootController = exports.RootController = function () {
         value: function addUser(id) {
             console.log(id);
         }
+    }, {
+        key: "cancel",
+        value: function cancel() {
+            this.mdDialog.hide();
+        }
     }]);
 
     return RootController;
