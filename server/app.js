@@ -35,7 +35,7 @@ app.get("/api/users", (req, res) =>{
                 name:"Vipin",
                 company:"ABC"
             }])
-    },5000)
+    },0)
  
 });
 app.use(express.static(path.resolve(__dirname, "../public")));

@@ -31,22 +31,6 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
             url: '/user',
             templateUrl: "views/users.html", 
             controller: 'userController',
-            // resolve: {
-            //     authorize: ['authService',
-            //       function(authService) {
-            //         return authService.isAuthenticated();
-            //       }
-            //     ],
-            //     users:["appService", function(appService){
-            //       return appService.getUsers();
-            //     }]
-            //   },
-
-            // resolve:{
-            //   users:["appService", function(appService){
-            //     return appService.getUsers();
-            //   }]
-            // },
             controllerAs: 'user' 
         }).state("userById", {
           url:"/user/{id}",
@@ -68,9 +52,7 @@ app.run(["$transitions", "$state",function($transitions, state) {
   console.log($transitions)
   $transitions.onStart({ to: 'user.**' }, async function(trans) {
     var auth = trans.injector().get('authService');
-    console.log("User");
     var result = await auth.isAuthenticated();
-    console.log(result)
     if(!result){
       return trans.router.stateService.target('accessdenied');
     }
@@ -79,9 +61,7 @@ app.run(["$transitions", "$state",function($transitions, state) {
 
   $transitions.onStart({ to: 'admin.**' },  async function(trans) {
     var auth = trans.injector().get('authService');
-    console.log("Admin")
     var result = await auth.isAdminAuthenticated();
-    console.log(result)
     if(!result){
       return trans.router.stateService.target('accessdenied');
     }

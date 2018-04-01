@@ -4,7 +4,7 @@ export class AppService{
     }
 
     getUsers(){
-        return this.http.get("/api/users");
+       return this.http.get("/api/users");
     }
 }
 
