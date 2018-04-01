@@ -1,12 +1,10 @@
 export class UserController{
-    constructor(appService, stateParams,state, authService){
+    constructor(appService, stateParams){
 
         this.appService = appService;
         this.app = "user works!";
     this.selected = [];
 
-    authService.isAuthenticated();
-    console.log(stateParams.id);
 
     this.users = this.getUsers();
     this.getUsers();
@@ -33,4 +31,4 @@ export class UserController{
 
 }
 
-UserController.$inject = ["appService", "$stateParams","$state", "authService"];
+UserController.$inject = ["appService", "$stateParams"];

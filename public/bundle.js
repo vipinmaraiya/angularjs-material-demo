@@ -8724,6 +8724,9 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     //   },
 
     controllerAs: 'user'
+  }).state("admin", {
+    url: "/admin",
+    templateUrl: "views/admin.html"
   }).state("accessdenied", {
     url: "/denied",
     templateUrl: "views/accessdenied.html"
@@ -8732,16 +8735,26 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 });
 
-// Migrate to: UI-Router 1.0 Transition Hook
 app.run(["$transitions", function ($transitions) {
+  console.log($transitions);
+  $transitions.onStart({ to: 'user.**' }, function (trans) {
+    var auth = trans.injector().get('authService');
+    console.log("User");
+    auth.isAuthenticated(function (result) {
+      if (!result) {
+        return trans.router.stateService.target('accessdenied');
+      }
+    });
+  });
 
-  $transitions.onStart({ to: 'auth.**' }, function (trans) {
-    console.log("state");
-    // var auth = trans.injector().get('AuthService');
-    if (true) {
-      // User isn't authenticated. Redirect to a new Target State
-      return trans.router.stateService.target('login');
-    }
+  $transitions.onStart({ to: 'admin.**' }, function (trans) {
+    var auth = trans.injector().get('authService');
+    console.log("Admin");
+    auth.isAdminAuthenticated(function (result) {
+      if (!result) {
+        return trans.router.stateService.target('accessdenied');
+      }
+    });
   });
 }]);
 
@@ -11598,15 +11611,12 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var UserController = exports.UserController = function () {
-    function UserController(appService, stateParams, state, authService) {
+    function UserController(appService, stateParams) {
         _classCallCheck(this, UserController);
 
         this.appService = appService;
         this.app = "user works!";
         this.selected = [];
-
-        authService.isAuthenticated();
-        console.log(stateParams.id);
 
         this.users = this.getUsers();
         this.getUsers();
@@ -11639,7 +11649,7 @@ var UserController = exports.UserController = function () {
     return UserController;
 }();
 
-UserController.$inject = ["appService", "$stateParams", "$state", "authService"];
+UserController.$inject = ["appService", "$stateParams"];
 
 /***/ }),
 /* 97 */
@@ -11701,8 +11711,13 @@ var AuthService = exports.AuthService = function () {
 
     _createClass(AuthService, [{
         key: "isAuthenticated",
-        value: function isAuthenticated() {
-            if (false) this.state.go("accessdenied");
+        value: function isAuthenticated(callback) {
+            callback(true);
+        }
+    }, {
+        key: "isAdminAuthenticated",
+        value: function isAdminAuthenticated(callback) {
+            callback(false);
         }
     }]);
 

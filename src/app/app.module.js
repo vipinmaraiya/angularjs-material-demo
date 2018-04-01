@@ -43,7 +43,11 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
             //   },
 
             controllerAs: 'user' 
-        }).state("accessdenied", {
+        }).state("admin", {
+          url:"/admin",
+          templateUrl:"views/admin.html"
+        })
+        .state("accessdenied", {
           url:"/denied",
           templateUrl:"views/accessdenied.html"
         })
@@ -51,17 +55,28 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
         $locationProvider.html5Mode(true);
 })
 
-// Migrate to: UI-Router 1.0 Transition Hook
 app.run(["$transitions",function($transitions) {
-
-  $transitions.onStart({ to: 'auth.**' }, function(trans) {
-    console.log("state")
-    // var auth = trans.injector().get('AuthService');
-    if (true) {
-      // User isn't authenticated. Redirect to a new Target State
-      return trans.router.stateService.target('login');
-    }
+  console.log($transitions)
+  $transitions.onStart({ to: 'user.**' }, function(trans) {
+    var auth = trans.injector().get('authService');
+    console.log("User")
+    auth.isAuthenticated(function(result){
+      if(!result){
+        return trans.router.stateService.target('accessdenied');
+      }
+    })
   });
+
+  $transitions.onStart({ to: 'admin.**' }, function(trans) {
+    var auth = trans.injector().get('authService');
+    console.log("Admin")
+    auth.isAdminAuthenticated(function(result){
+      if(!result){
+        return trans.router.stateService.target('accessdenied');
+      }
+    })
+  });
+
 }])
 
 app.config(function($mdThemingProvider) {

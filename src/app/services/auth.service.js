@@ -2,9 +2,11 @@ export class AuthService{
     constructor(state){
         this.state = state;
     }
-    isAuthenticated(){
-        if(false)
-        this.state.go("accessdenied")
+    isAuthenticated(callback){
+        callback(true);
+    }
+    isAdminAuthenticated(callback){
+        callback(false);
     }
 }
 
