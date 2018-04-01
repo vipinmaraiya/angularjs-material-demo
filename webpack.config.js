@@ -12,7 +12,8 @@ const VENDOR_LIBS =[
     //  "angular-animate",
      "angular-sanitize",
      "angular-messages",
-    "angular-material-data-table"
+    "angular-material-data-table",
+    "babel-polyfill"
 ]
 
 module.exports = {

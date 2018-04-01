@@ -6,9 +6,6 @@ export class UserController{
     this.selected = [];
 
 
-    this.users = this.getUsers();
-    this.getUsers();
-
     this.query = {
         order: 'name',
         limit: 5,

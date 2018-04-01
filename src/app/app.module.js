@@ -10,7 +10,7 @@ import 'angular-aria';
 import 'angular-material';
 
 const app = angular
-.module("app",[uiRouter, "ngMaterial","ui.select", 
+.module("app",[uiRouter, "ngMaterial","ui.select",
 require("angular-sanitize"), 
 require("angular-messages"),
 require('angular-material-data-table')])
@@ -28,8 +28,8 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
             controllerAs: 'root', 
             authenticate: false
         }).state('user', {
-            url: '/user/{id}',
-            templateUrl: "views/user.html", 
+            url: '/user',
+            templateUrl: "views/users.html", 
             controller: 'userController',
             // resolve: {
             //     authorize: ['authService',
@@ -42,8 +42,17 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
             //     }]
             //   },
 
+            // resolve:{
+            //   users:["appService", function(appService){
+            //     return appService.getUsers();
+            //   }]
+            // },
             controllerAs: 'user' 
-        }).state("admin", {
+        }).state("userById", {
+          url:"/user/{id}",
+          templateUrl:"views/user.html"
+        })
+        .state("admin", {
           url:"/admin",
           templateUrl:"views/admin.html"
         })
@@ -55,26 +64,27 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
         $locationProvider.html5Mode(true);
 })
 
-app.run(["$transitions",function($transitions) {
+app.run(["$transitions", "$state",function($transitions, state) {
   console.log($transitions)
-  $transitions.onStart({ to: 'user.**' }, function(trans) {
+  $transitions.onStart({ to: 'user.**' }, async function(trans) {
     var auth = trans.injector().get('authService');
-    console.log("User")
-    auth.isAuthenticated(function(result){
-      if(!result){
-        return trans.router.stateService.target('accessdenied');
-      }
-    })
+    console.log("User");
+    var result = await auth.isAuthenticated();
+    console.log(result)
+    if(!result){
+      return trans.router.stateService.target('accessdenied');
+    }
+
   });
 
-  $transitions.onStart({ to: 'admin.**' }, function(trans) {
+  $transitions.onStart({ to: 'admin.**' },  async function(trans) {
     var auth = trans.injector().get('authService');
     console.log("Admin")
-    auth.isAdminAuthenticated(function(result){
-      if(!result){
-        return trans.router.stateService.target('accessdenied');
-      }
-    })
+    var result = await auth.isAdminAuthenticated();
+    console.log(result)
+    if(!result){
+      return trans.router.stateService.target('accessdenied');
+    }
   });
 
 }])

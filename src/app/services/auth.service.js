@@ -2,11 +2,15 @@ export class AuthService{
     constructor(state){
         this.state = state;
     }
-    isAuthenticated(callback){
-        callback(true);
+    isAuthenticated (){
+        return new Promise(function(resolve, reject){
+            resolve(true);
+        });
     }
     isAdminAuthenticated(callback){
-        callback(false);
+        return new Promise(function(resolve, reject){
+            resolve(false);
+        });
     }
 }
 

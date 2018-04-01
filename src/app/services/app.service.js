@@ -3,10 +3,8 @@ export class AppService{
         this.http = http;
     }
 
-    getUsers(callback){
-        this.http.get("/api/users").then((result)=>{
-            return result.data;
-        });
+    getUsers(){
+        return this.http.get("/api/users");
     }
 }
 
