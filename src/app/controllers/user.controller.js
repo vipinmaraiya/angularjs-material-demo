@@ -1,13 +1,16 @@
-
 export class UserController{
-    constructor(appService){
+    constructor(appService, stateParams,state, authService){
+
         this.appService = appService;
         this.app = "user works!";
     this.selected = [];
+
+    authService.isAuthenticated();
+    console.log(stateParams.id);
+
     this.users = this.getUsers();
     this.getUsers();
 
-      
     this.query = {
         order: 'name',
         limit: 5,
@@ -16,6 +19,8 @@ export class UserController{
     }
 
     getUsers(){
+        //Go to route
+        // this.stateService.go("login");
         this.appService.getUsers((result)=>{
             this.users = result;
         })
@@ -28,4 +33,4 @@ export class UserController{
 
 }
 
-UserController.$inject = ["appService"];
+UserController.$inject = ["appService", "$stateParams","$state", "authService"];

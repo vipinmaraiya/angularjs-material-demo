@@ -5,34 +5,38 @@ const path = require("path");
 
 
 app.get("/api/users", (req, res) =>{
-    res.send([
-        {
-            name:"AVipin",
-            company:"ABC"
-        },
-        {
-            name:"BVipin",
-            company:"ABC"
-        },
-        {
-            name:"CVipin",
-            company:"ABC"
-        },
-        {
-            name:"DVipin",
-            company:"ABC"
-        },{
-            name:"ZVipin",
-            company:"ABC"
-        },
-        {
-            name:"Vipin",
-            company:"ABC"
-        },
-        {
-            name:"Vipin",
-            company:"ABC"
-        }])
+
+    setTimeout(function(){
+        res.send([
+            {
+                name:"AVipin",
+                company:"ABC"
+            },
+            {
+                name:"BVipin",
+                company:"ABC"
+            },
+            {
+                name:"CVipin",
+                company:"ABC"
+            },
+            {
+                name:"DVipin",
+                company:"ABC"
+            },{
+                name:"ZVipin",
+                company:"ABC"
+            },
+            {
+                name:"Vipin",
+                company:"ABC"
+            },
+            {
+                name:"Vipin",
+                company:"ABC"
+            }])
+    },5000)
+ 
 });
 app.use(express.static(path.resolve(__dirname, "../public")));
 

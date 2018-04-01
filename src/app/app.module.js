@@ -25,35 +25,44 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
             url: '/',
             templateUrl: "views/login.html", 
             controller: 'rootController',
-            controllerAs: 'root' 
+            controllerAs: 'root', 
+            authenticate: false
         }).state('user', {
-            url: '/user',
+            url: '/user/{id}',
             templateUrl: "views/user.html", 
             controller: 'userController',
-            resolve: {
-                authorize: ['authService',
-                  function(authService) {
-                    return authService.isAuthenticated();
-                  }
-                ]
-              },
+            // resolve: {
+            //     authorize: ['authService',
+            //       function(authService) {
+            //         return authService.isAuthenticated();
+            //       }
+            //     ],
+            //     users:["appService", function(appService){
+            //       return appService.getUsers();
+            //     }]
+            //   },
+
             controllerAs: 'user' 
+        }).state("accessdenied", {
+          url:"/denied",
+          templateUrl:"views/accessdenied.html"
         })
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(true);
-}).run(['$rootScope', '$state', '$stateParams', 'authService',
-"$location",
-function($rootScope, $state, $stateParams, authService, location) {
-  $rootScope.$on('$stateChangeStart', function(event, toState, toStateParams) {
-    $rootScope.toState = toState;
-    $rootScope.toStateParams = toStateParams;
+})
 
-    if (!authService.isAuthenticated()){
-        location.path("/")
+// Migrate to: UI-Router 1.0 Transition Hook
+app.run(["$transitions",function($transitions) {
+
+  $transitions.onStart({ to: 'auth.**' }, function(trans) {
+    console.log("state")
+    // var auth = trans.injector().get('AuthService');
+    if (true) {
+      // User isn't authenticated. Redirect to a new Target State
+      return trans.router.stateService.target('login');
     }
   });
-}
-]);
+}])
 
 app.config(function($mdThemingProvider) {
 

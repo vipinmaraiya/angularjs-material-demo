@@ -590,7 +590,7 @@ exports.silentRejection = function (error) {
     return exports.silenceUncaughtInPromise(coreservices_1.services.$q.reject(error));
 };
 //# sourceMappingURL=common.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(91)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(94)))
 
 /***/ }),
 /* 1 */
@@ -611,7 +611,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 /** */
 var hof_1 = __webpack_require__(2);
-var stateObject_1 = __webpack_require__(23);
+var stateObject_1 = __webpack_require__(24);
 var toStr = Object.prototype.toString;
 var tis = function tis(t) {
   return function (x) {
@@ -967,10 +967,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /** @module common */ /** for typedoc */
 __export(__webpack_require__(0));
 __export(__webpack_require__(3));
-__export(__webpack_require__(19));
+__export(__webpack_require__(20));
 __export(__webpack_require__(2));
 __export(__webpack_require__(1));
-__export(__webpack_require__(20));
+__export(__webpack_require__(21));
 __export(__webpack_require__(5));
 __export(__webpack_require__(6));
 //# sourceMappingURL=index.js.map
@@ -1404,7 +1404,7 @@ var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var predicates_1 = __webpack_require__(1);
 var coreservices_1 = __webpack_require__(3);
-var paramType_1 = __webpack_require__(21);
+var paramType_1 = __webpack_require__(22);
 /** @hidden */
 var hasOwn = Object.prototype.hasOwnProperty;
 /** @hidden */
@@ -2271,7 +2271,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var targetState_1 = __webpack_require__(8);
-var pathNode_1 = __webpack_require__(22);
+var pathNode_1 = __webpack_require__(23);
 /**
  * This class contains functions which convert TargetStates, Nodes and paths from one type to another.
  */
@@ -2467,7 +2467,7 @@ var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var trace_1 = __webpack_require__(6);
 var coreservices_1 = __webpack_require__(3);
-var interface_1 = __webpack_require__(37);
+var interface_1 = __webpack_require__(38);
 var resolvable_1 = __webpack_require__(11);
 var pathUtils_1 = __webpack_require__(14);
 var strings_1 = __webpack_require__(5);
@@ -2709,8 +2709,8 @@ var predicates_1 = __webpack_require__(1);
 var hof_1 = __webpack_require__(2);
 var interface_1 = __webpack_require__(9); // has or is using
 var transitionHook_1 = __webpack_require__(13);
-var hookRegistry_1 = __webpack_require__(24);
-var hookBuilder_1 = __webpack_require__(44);
+var hookRegistry_1 = __webpack_require__(25);
+var hookBuilder_1 = __webpack_require__(45);
 var pathUtils_1 = __webpack_require__(14);
 var param_1 = __webpack_require__(7);
 var resolvable_1 = __webpack_require__(11);
@@ -3944,7 +3944,7 @@ exports.UrlMatcher = UrlMatcher;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var common_1 = __webpack_require__(4);
-var utils_1 = __webpack_require__(26);
+var utils_1 = __webpack_require__(27);
 /** A base `LocationServices` */
 var BaseLocationServices = /** @class */function () {
     function BaseLocationServices(router, fireAfterUpdate) {
@@ -3998,7 +3998,8 @@ exports.BaseLocationServices = BaseLocationServices;
 //# sourceMappingURL=baseLocationService.js.map
 
 /***/ }),
-/* 19 */
+/* 19 */,
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4085,7 +4086,7 @@ exports.Glob = Glob;
 //# sourceMappingURL=glob.js.map
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4147,7 +4148,7 @@ exports.Queue = Queue;
 //# sourceMappingURL=queue.js.map
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4305,7 +4306,7 @@ function ArrayType(type, mode) {
 //# sourceMappingURL=paramType.js.map
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4399,7 +4400,7 @@ exports.PathNode = PathNode;
 //# sourceMappingURL=pathNode.js.map
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4408,7 +4409,7 @@ exports.PathNode = PathNode;
 Object.defineProperty(exports, "__esModule", { value: true });
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
-var glob_1 = __webpack_require__(19);
+var glob_1 = __webpack_require__(20);
 var predicates_1 = __webpack_require__(1);
 /**
  * Internal representation of a UI-Router state.
@@ -4522,7 +4523,7 @@ exports.StateObject = StateObject;
 //# sourceMappingURL=stateObject.js.map
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4695,7 +4696,7 @@ exports.makeEvent = makeEvent;
 //# sourceMappingURL=hookRegistry.js.map
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4709,22 +4710,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /** for typedoc */
 var interface_1 = __webpack_require__(9);
 var transition_1 = __webpack_require__(16);
-var hookRegistry_1 = __webpack_require__(24);
-var coreResolvables_1 = __webpack_require__(65);
-var redirectTo_1 = __webpack_require__(69);
-var onEnterExitRetain_1 = __webpack_require__(68);
-var resolve_1 = __webpack_require__(70);
-var views_1 = __webpack_require__(73);
-var updateGlobals_1 = __webpack_require__(71);
-var url_1 = __webpack_require__(72);
-var lazyLoad_1 = __webpack_require__(32);
-var transitionEventType_1 = __webpack_require__(45);
+var hookRegistry_1 = __webpack_require__(25);
+var coreResolvables_1 = __webpack_require__(67);
+var redirectTo_1 = __webpack_require__(71);
+var onEnterExitRetain_1 = __webpack_require__(70);
+var resolve_1 = __webpack_require__(72);
+var views_1 = __webpack_require__(75);
+var updateGlobals_1 = __webpack_require__(73);
+var url_1 = __webpack_require__(74);
+var lazyLoad_1 = __webpack_require__(33);
+var transitionEventType_1 = __webpack_require__(46);
 var transitionHook_1 = __webpack_require__(13);
 var predicates_1 = __webpack_require__(1);
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
-var ignoredTransition_1 = __webpack_require__(66);
-var invalidTransition_1 = __webpack_require__(67);
+var ignoredTransition_1 = __webpack_require__(68);
+var invalidTransition_1 = __webpack_require__(69);
 /**
  * The default [[Transition]] options.
  *
@@ -4968,7 +4969,7 @@ exports.TransitionService = TransitionService;
 //# sourceMappingURL=transitionService.js.map
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5037,11 +5038,11 @@ exports.locationPluginFactory = locationPluginFactory;
 //# sourceMappingURL=utils.js.map
 
 /***/ }),
-/* 27 */,
 /* 28 */,
 /* 29 */,
 /* 30 */,
-/* 31 */
+/* 31 */,
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5052,8 +5053,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @coreapi
  * @module core
  */ /** */
-var stateParams_1 = __webpack_require__(35);
-var queue_1 = __webpack_require__(20);
+var stateParams_1 = __webpack_require__(36);
+var queue_1 = __webpack_require__(21);
 /**
  * Global router state
  *
@@ -5086,7 +5087,7 @@ exports.UIRouterGlobals = UIRouterGlobals;
 //# sourceMappingURL=globals.js.map
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5193,7 +5194,7 @@ exports.lazyLoadState = lazyLoadState;
 //# sourceMappingURL=lazyLoad.js.map
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5210,21 +5211,21 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(4));
-__export(__webpack_require__(75));
-__export(__webpack_require__(76));
-__export(__webpack_require__(36));
 __export(__webpack_require__(77));
 __export(__webpack_require__(78));
+__export(__webpack_require__(37));
 __export(__webpack_require__(79));
-__export(__webpack_require__(83));
-__export(__webpack_require__(31));
-__export(__webpack_require__(38));
 __export(__webpack_require__(80));
-__export(__webpack_require__(74));
+__export(__webpack_require__(81));
+__export(__webpack_require__(85));
+__export(__webpack_require__(32));
+__export(__webpack_require__(39));
+__export(__webpack_require__(82));
+__export(__webpack_require__(76));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5240,7 +5241,7 @@ var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var hof_1 = __webpack_require__(2);
 var coreservices_1 = __webpack_require__(3);
-var paramType_1 = __webpack_require__(21);
+var paramType_1 = __webpack_require__(22);
 /**
  * A registry for parameter types.
  *
@@ -5392,7 +5393,7 @@ initDefaultTypes();
 //# sourceMappingURL=paramTypes.js.map
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5444,7 +5445,7 @@ exports.StateParams = StateParams;
 //# sourceMappingURL=stateParams.js.map
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5457,13 +5458,13 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 /** @module resolve */ /** for typedoc */
-__export(__webpack_require__(37));
+__export(__webpack_require__(38));
 __export(__webpack_require__(11));
 __export(__webpack_require__(15));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5485,7 +5486,7 @@ exports.resolvePolicies = {
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5496,16 +5497,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @coreapi
  * @module core
  */ /** */
-var urlMatcherFactory_1 = __webpack_require__(46);
-var urlRouter_1 = __webpack_require__(47);
-var transitionService_1 = __webpack_require__(25);
-var view_1 = __webpack_require__(57);
-var stateRegistry_1 = __webpack_require__(42);
-var stateService_1 = __webpack_require__(43);
-var globals_1 = __webpack_require__(31);
+var urlMatcherFactory_1 = __webpack_require__(47);
+var urlRouter_1 = __webpack_require__(48);
+var transitionService_1 = __webpack_require__(26);
+var view_1 = __webpack_require__(58);
+var stateRegistry_1 = __webpack_require__(43);
+var stateService_1 = __webpack_require__(44);
+var globals_1 = __webpack_require__(32);
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
-var urlService_1 = __webpack_require__(49);
+var urlService_1 = __webpack_require__(50);
 var trace_1 = __webpack_require__(6);
 /** @hidden */
 var _routerInstance = 0;
@@ -5680,7 +5681,7 @@ exports.UIRouter = UIRouter;
 //# sourceMappingURL=router.js.map
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5993,7 +5994,7 @@ exports.StateBuilder = StateBuilder;
 //# sourceMappingURL=stateBuilder.js.map
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6065,7 +6066,7 @@ exports.StateMatcher = StateMatcher;
 //# sourceMappingURL=stateMatcher.js.map
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6075,7 +6076,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /** @module state */ /** for typedoc */
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
-var stateObject_1 = __webpack_require__(23);
+var stateObject_1 = __webpack_require__(24);
 var hof_1 = __webpack_require__(2);
 /** @internalapi */
 var StateQueueManager = /** @class */function () {
@@ -6168,7 +6169,7 @@ exports.StateQueueManager = StateQueueManager;
 //# sourceMappingURL=stateQueueManager.js.map
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6179,9 +6180,9 @@ exports.StateQueueManager = StateQueueManager;
  */ /** for typedoc */
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var stateMatcher_1 = __webpack_require__(40);
-var stateBuilder_1 = __webpack_require__(39);
-var stateQueueManager_1 = __webpack_require__(41);
+var stateMatcher_1 = __webpack_require__(41);
+var stateBuilder_1 = __webpack_require__(40);
+var stateQueueManager_1 = __webpack_require__(42);
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var StateRegistry = /** @class */function () {
@@ -6341,7 +6342,7 @@ exports.StateRegistry = StateRegistry;
 //# sourceMappingURL=stateRegistry.js.map
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6355,17 +6356,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /** */
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
-var queue_1 = __webpack_require__(20);
+var queue_1 = __webpack_require__(21);
 var coreservices_1 = __webpack_require__(3);
 var pathUtils_1 = __webpack_require__(14);
-var pathNode_1 = __webpack_require__(22);
-var transitionService_1 = __webpack_require__(25);
+var pathNode_1 = __webpack_require__(23);
+var transitionService_1 = __webpack_require__(26);
 var rejectFactory_1 = __webpack_require__(12);
 var targetState_1 = __webpack_require__(8);
 var param_1 = __webpack_require__(7);
-var glob_1 = __webpack_require__(19);
+var glob_1 = __webpack_require__(20);
 var resolveContext_1 = __webpack_require__(15);
-var lazyLoad_1 = __webpack_require__(32);
+var lazyLoad_1 = __webpack_require__(33);
 var hof_1 = __webpack_require__(2);
 /**
  * Provides state related service functions
@@ -6917,7 +6918,7 @@ exports.StateService = StateService;
 //# sourceMappingURL=stateService.js.map
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7046,7 +7047,7 @@ function tupleSort(reverseDepthSort) {
 //# sourceMappingURL=hookBuilder.js.map
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7090,7 +7091,7 @@ exports.TransitionEventType = TransitionEventType;
 //# sourceMappingURL=transitionEventType.js.map
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7105,7 +7106,7 @@ var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var urlMatcher_1 = __webpack_require__(17);
 var param_1 = __webpack_require__(7);
-var paramTypes_1 = __webpack_require__(34);
+var paramTypes_1 = __webpack_require__(35);
 /**
  * Factory for [[UrlMatcher]] instances.
  *
@@ -7218,7 +7219,7 @@ exports.UrlMatcherFactory = UrlMatcherFactory;
 //# sourceMappingURL=urlMatcherFactory.js.map
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7234,7 +7235,7 @@ var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var urlMatcher_1 = __webpack_require__(17);
 var hof_1 = __webpack_require__(2);
-var urlRule_1 = __webpack_require__(48);
+var urlRule_1 = __webpack_require__(49);
 var targetState_1 = __webpack_require__(8);
 var common_2 = __webpack_require__(4);
 /** @hidden */
@@ -7532,7 +7533,7 @@ function getHandlerFn(handler) {
 //# sourceMappingURL=urlRouter.js.map
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7757,7 +7758,7 @@ exports.BaseUrlRule = BaseUrlRule;
 //# sourceMappingURL=urlRule.js.map
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7870,7 +7871,7 @@ exports.UrlService = UrlService;
 //# sourceMappingURL=urlService.js.map
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7925,7 +7926,7 @@ exports.BrowserLocationConfig = BrowserLocationConfig;
 //# sourceMappingURL=browserLocationConfig.js.map
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7979,7 +7980,7 @@ exports.HashLocationService = HashLocationService;
 //# sourceMappingURL=hashLocationService.js.map
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8090,7 +8091,7 @@ exports.$injector = {
 //# sourceMappingURL=injector.js.map
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8134,7 +8135,7 @@ exports.MemoryLocationConfig = MemoryLocationConfig;
 //# sourceMappingURL=memoryLocationConfig.js.map
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8181,7 +8182,7 @@ exports.MemoryLocationService = MemoryLocationService;
 //# sourceMappingURL=memoryLocationService.js.map
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8271,7 +8272,7 @@ exports.PushStateLocationService = PushStateLocationService;
 //# sourceMappingURL=pushStateLocationService.js.map
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8346,7 +8347,7 @@ exports.$q = {
 //# sourceMappingURL=q.js.map
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8664,9 +8665,9 @@ exports.ViewService = ViewService;
 //# sourceMappingURL=view.js.map
 
 /***/ }),
-/* 58 */,
 /* 59 */,
-/* 60 */
+/* 60 */,
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8676,56 +8677,70 @@ var _angular = __webpack_require__(10);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _root = __webpack_require__(92);
+var _root = __webpack_require__(95);
 
-var _app = __webpack_require__(94);
+var _app = __webpack_require__(97);
 
 var _auth = __webpack_require__(98);
 
-var _user = __webpack_require__(93);
+var _user = __webpack_require__(96);
 
-var _angularjs = __webpack_require__(64);
+var _angularjs = __webpack_require__(66);
 
 var _angularjs2 = _interopRequireDefault(_angularjs);
 
-__webpack_require__(30);
-
-__webpack_require__(58);
+__webpack_require__(31);
 
 __webpack_require__(59);
 
-__webpack_require__(27);
+__webpack_require__(60);
+
+__webpack_require__(19);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var app = _angular2.default.module("app", [_angularjs2.default, "ngMaterial", "ui.select", __webpack_require__(29), __webpack_require__(28), __webpack_require__(100)]).service("appService", _app.AppService).service("authService", _auth.AuthService).controller("rootController", _root.RootController).controller("userController", _user.UserController);
+var app = _angular2.default.module("app", [_angularjs2.default, "ngMaterial", "ui.select", __webpack_require__(30), __webpack_require__(29), __webpack_require__(28)]).service("appService", _app.AppService).service("authService", _auth.AuthService).controller("rootController", _root.RootController).controller("userController", _user.UserController);
 
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state('login', {
     url: '/',
     templateUrl: "views/login.html",
     controller: 'rootController',
-    controllerAs: 'root'
+    controllerAs: 'root',
+    authenticate: false
   }).state('user', {
-    url: '/user',
+    url: '/user/{id}',
     templateUrl: "views/user.html",
     controller: 'userController',
-    resolve: {
-      authorize: ['authService', function (authService) {
-        return authService.isAuthenticated();
-      }]
-    },
+    // resolve: {
+    //     authorize: ['authService',
+    //       function(authService) {
+    //         return authService.isAuthenticated();
+    //       }
+    //     ],
+    //     users:["appService", function(appService){
+    //       return appService.getUsers();
+    //     }]
+    //   },
+
     controllerAs: 'user'
+  }).state("accessdenied", {
+    url: "/denied",
+    templateUrl: "views/accessdenied.html"
   });
   $urlRouterProvider.otherwise('/');
   $locationProvider.html5Mode(true);
-}).run(['$rootScope', '$state', '$stateParams', 'authService', "$location", function ($rootScope, $state, $stateParams, authService, location) {
-  $rootScope.$on('$stateChangeStart', function (event, toState, toStateParams) {
-    $rootScope.toState = toState;
-    $rootScope.toStateParams = toStateParams;
+});
 
-    if (!authService.isAuthenticated()) {
-      location.path("/");
+// Migrate to: UI-Router 1.0 Transition Hook
+app.run(["$transitions", function ($transitions) {
+
+  $transitions.onStart({ to: 'auth.**' }, function (trans) {
+    console.log("state");
+    // var auth = trans.injector().get('AuthService');
+    if (true) {
+      // User isn't authenticated. Redirect to a new Target State
+      return trans.router.stateService.target('login');
     }
   });
 }]);
@@ -8736,12 +8751,6 @@ app.config(function ($mdThemingProvider) {
 
   $mdThemingProvider.theme('docs-dark', 'default').primaryPalette('yellow').dark();
 });
-
-/***/ }),
-/* 61 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 62 */
@@ -8757,6 +8766,18 @@ app.config(function ($mdThemingProvider) {
 
 /***/ }),
 /* 64 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8772,7 +8793,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 (function (global, factory) {
-    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? factory(exports, __webpack_require__(10), __webpack_require__(33)) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(10), __webpack_require__(33)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    ( false ? 'undefined' : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? factory(exports, __webpack_require__(10), __webpack_require__(34)) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(10), __webpack_require__(34)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : factory(global['@uirouter/angularjs'] = {}, global.angular, global['@uirouter/core']);
@@ -10806,7 +10827,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 //# sourceMappingURL=ui-router-angularjs.js.map
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10815,8 +10836,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 Object.defineProperty(exports, "__esModule", { value: true });
 /** @module hooks */ /** */
 var transition_1 = __webpack_require__(16);
-var router_1 = __webpack_require__(38);
-var resolve_1 = __webpack_require__(36);
+var router_1 = __webpack_require__(39);
+var resolve_1 = __webpack_require__(37);
 var common_1 = __webpack_require__(4);
 function addCoreResolvables(trans) {
     trans.addResolvable(resolve_1.Resolvable.fromData(router_1.UIRouter, trans.router), '');
@@ -10849,7 +10870,7 @@ exports.treeChangesCleanup = function (trans) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10886,7 +10907,7 @@ exports.registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10912,7 +10933,7 @@ exports.registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10982,7 +11003,7 @@ exports.registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11023,7 +11044,7 @@ exports.registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 70 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11085,7 +11106,7 @@ exports.registerResolveRemaining = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 71 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11126,7 +11147,7 @@ exports.registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 72 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11158,7 +11179,7 @@ exports.registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11216,7 +11237,7 @@ exports.registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11243,43 +11264,6 @@ exports.UIRouterPluginBase = UIRouterPluginBase;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function __export(m) {
-    for (var p in m) {
-        if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-    }
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(7));
-__export(__webpack_require__(34));
-__export(__webpack_require__(35));
-__export(__webpack_require__(21));
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function __export(m) {
-    for (var p in m) {
-        if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-    }
-}
-Object.defineProperty(exports, "__esModule", { value: true });
-/** @module path */ /** for typedoc */
-__export(__webpack_require__(22));
-__export(__webpack_require__(14));
-//# sourceMappingURL=index.js.map
-
-/***/ }),
 /* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11292,17 +11276,54 @@ function __export(m) {
     }
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(39));
-__export(__webpack_require__(23));
-__export(__webpack_require__(40));
-__export(__webpack_require__(41));
-__export(__webpack_require__(42));
-__export(__webpack_require__(43));
-__export(__webpack_require__(8));
+__export(__webpack_require__(7));
+__export(__webpack_require__(35));
+__export(__webpack_require__(36));
+__export(__webpack_require__(22));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 /* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function __export(m) {
+    for (var p in m) {
+        if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    }
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+/** @module path */ /** for typedoc */
+__export(__webpack_require__(23));
+__export(__webpack_require__(14));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function __export(m) {
+    for (var p in m) {
+        if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+    }
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(40));
+__export(__webpack_require__(24));
+__export(__webpack_require__(41));
+__export(__webpack_require__(42));
+__export(__webpack_require__(43));
+__export(__webpack_require__(44));
+__export(__webpack_require__(8));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11329,17 +11350,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module transition
  */ /** for typedoc */
 __export(__webpack_require__(9));
-__export(__webpack_require__(44));
-__export(__webpack_require__(24));
+__export(__webpack_require__(45));
+__export(__webpack_require__(25));
 __export(__webpack_require__(12));
 __export(__webpack_require__(16));
 __export(__webpack_require__(13));
-__export(__webpack_require__(45));
-__export(__webpack_require__(25));
+__export(__webpack_require__(46));
+__export(__webpack_require__(26));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11352,14 +11373,14 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(17));
-__export(__webpack_require__(46));
 __export(__webpack_require__(47));
 __export(__webpack_require__(48));
 __export(__webpack_require__(49));
+__export(__webpack_require__(50));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11376,11 +11397,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module vanilla
  */
 /** */
-__export(__webpack_require__(81));
+__export(__webpack_require__(83));
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 81 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11392,20 +11413,20 @@ function __export(m) {
     }
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(56));
-__export(__webpack_require__(52));
-__export(__webpack_require__(18));
-__export(__webpack_require__(51));
-__export(__webpack_require__(54));
-__export(__webpack_require__(55));
+__export(__webpack_require__(57));
 __export(__webpack_require__(53));
-__export(__webpack_require__(50));
-__export(__webpack_require__(26));
-__export(__webpack_require__(82));
+__export(__webpack_require__(18));
+__export(__webpack_require__(52));
+__export(__webpack_require__(55));
+__export(__webpack_require__(56));
+__export(__webpack_require__(54));
+__export(__webpack_require__(51));
+__export(__webpack_require__(27));
+__export(__webpack_require__(84));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 82 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11417,14 +11438,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module vanilla
  */
 /** */
-var browserLocationConfig_1 = __webpack_require__(50);
-var hashLocationService_1 = __webpack_require__(51);
-var utils_1 = __webpack_require__(26);
-var pushStateLocationService_1 = __webpack_require__(55);
-var memoryLocationService_1 = __webpack_require__(54);
-var memoryLocationConfig_1 = __webpack_require__(53);
-var injector_1 = __webpack_require__(52);
-var q_1 = __webpack_require__(56);
+var browserLocationConfig_1 = __webpack_require__(51);
+var hashLocationService_1 = __webpack_require__(52);
+var utils_1 = __webpack_require__(27);
+var pushStateLocationService_1 = __webpack_require__(56);
+var memoryLocationService_1 = __webpack_require__(55);
+var memoryLocationConfig_1 = __webpack_require__(54);
+var injector_1 = __webpack_require__(53);
+var q_1 = __webpack_require__(57);
 var coreservices_1 = __webpack_require__(3);
 function servicesPlugin(router) {
   coreservices_1.services.$injector = injector_1.$injector;
@@ -11443,7 +11464,7 @@ exports.memoryLocationPlugin = utils_1.locationPluginFactory('vanilla.memoryLoca
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 83 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11455,18 +11476,19 @@ function __export(m) {
     }
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(57));
+__export(__webpack_require__(58));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 84 */,
-/* 85 */,
 /* 86 */,
 /* 87 */,
 /* 88 */,
 /* 89 */,
 /* 90 */,
-/* 91 */
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11496,7 +11518,7 @@ try {
 module.exports = g;
 
 /***/ }),
-/* 92 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11561,7 +11583,7 @@ var RootController = exports.RootController = function () {
 RootController.$inject = ["appService", "$mdDialog"];
 
 /***/ }),
-/* 93 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11576,12 +11598,16 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var UserController = exports.UserController = function () {
-    function UserController(appService) {
+    function UserController(appService, stateParams, state, authService) {
         _classCallCheck(this, UserController);
 
         this.appService = appService;
         this.app = "user works!";
         this.selected = [];
+
+        authService.isAuthenticated();
+        console.log(stateParams.id);
+
         this.users = this.getUsers();
         this.getUsers();
 
@@ -11597,6 +11623,8 @@ var UserController = exports.UserController = function () {
         value: function getUsers() {
             var _this = this;
 
+            //Go to route
+            // this.stateService.go("login");
             this.appService.getUsers(function (result) {
                 _this.users = result;
             });
@@ -11611,10 +11639,10 @@ var UserController = exports.UserController = function () {
     return UserController;
 }();
 
-UserController.$inject = ["appService"];
+UserController.$inject = ["appService", "$stateParams", "$state", "authService"];
 
 /***/ }),
-/* 94 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11639,7 +11667,7 @@ var AppService = exports.AppService = function () {
         key: "getUsers",
         value: function getUsers(callback) {
             this.http.get("/api/users").then(function (result) {
-                callback(result.data);
+                return result.data;
             });
         }
     }]);
@@ -11650,25 +11678,6 @@ var AppService = exports.AppService = function () {
 AppService.$inject = ["$http"];
 
 /***/ }),
-/* 95 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(60);
-
-__webpack_require__(61);
-
-__webpack_require__(62);
-
-__webpack_require__(101);
-
-__webpack_require__(63);
-
-/***/ }),
-/* 96 */,
-/* 97 */,
 /* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11684,21 +11693,23 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var AuthService = exports.AuthService = function () {
-    function AuthService() {
+    function AuthService(state) {
         _classCallCheck(this, AuthService);
+
+        this.state = state;
     }
 
     _createClass(AuthService, [{
         key: "isAuthenticated",
         value: function isAuthenticated() {
-            return new Promise(function (resolve, reject) {
-                resolve("Access Denied from service");
-            });
+            if (false) this.state.go("accessdenied");
         }
     }]);
 
     return AuthService;
 }();
+
+AuthService.$inject = ["$state"];
 
 /***/ }),
 /* 99 */
@@ -11707,1438 +11718,15 @@ var AuthService = exports.AuthService = function () {
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+__webpack_require__(61);
 
-/*
- * Angular Material Data Table
- * https://github.com/daniel-nagy/md-data-table
- * @license MIT
- * v0.10.9
- */
-(function (window, angular, undefined) {
-  'use strict';
+__webpack_require__(63);
 
-  angular.module('md.table.templates', ['md-table-pagination.html', 'md-table-progress.html', 'arrow-up.svg', 'navigate-before.svg', 'navigate-first.svg', 'navigate-last.svg', 'navigate-next.svg']);
+__webpack_require__(64);
 
-  angular.module('md-table-pagination.html', []).run(['$templateCache', function ($templateCache) {
-    $templateCache.put('md-table-pagination.html', '<div class="page-select" ng-if="$pagination.showPageSelect()">\n' + '  <div class="label">{{$pagination.label.page}}</div>\n' + '\n' + '  <md-select virtual-page-select total="{{$pagination.pages()}}" class="md-table-select" ng-model="$pagination.page" md-container-class="md-pagination-select" ng-change="$pagination.onPaginationChange()" ng-disabled="$pagination.disabled" aria-label="Page">\n' + '    <md-content>\n' + '      <md-option ng-repeat="page in $pageSelect.pages" ng-value="page">{{page}}</md-option>\n' + '    </md-content>\n' + '  </md-select>\n' + '</div>\n' + '\n' + '<div class="limit-select" ng-if="$pagination.limitOptions">\n' + '  <div class="label">{{$pagination.label.rowsPerPage}}</div>\n' + '\n' + '  <md-select class="md-table-select" ng-model="$pagination.limit" md-container-class="md-pagination-select" ng-disabled="$pagination.disabled" aria-label="Rows" placeholder="{{ $pagination.limitOptions[0] }}">\n' + '    <md-option ng-repeat="option in $pagination.limitOptions" ng-value="option.value ? $pagination.eval(option.value) : option">{{::option.label ? option.label : option}}</md-option>\n' + '  </md-select>\n' + '</div>\n' + '\n' + '<div class="buttons">\n' + '  <div class="label">{{$pagination.min()}} - {{$pagination.max()}} {{$pagination.label.of}} {{$pagination.total}}</div>\n' + '\n' + '  <md-button class="md-icon-button" type="button" ng-if="$pagination.showBoundaryLinks()" ng-click="$pagination.first()" ng-disabled="$pagination.disabled || !$pagination.hasPrevious()" aria-label="First">\n' + '    <md-icon md-svg-icon="navigate-first.svg"></md-icon>\n' + '  </md-button>\n' + '\n' + '  <md-button class="md-icon-button" type="button" ng-click="$pagination.previous()" ng-disabled="$pagination.disabled || !$pagination.hasPrevious()" aria-label="Previous">\n' + '    <md-icon md-svg-icon="navigate-before.svg"></md-icon>\n' + '  </md-button>\n' + '\n' + '  <md-button class="md-icon-button" type="button" ng-click="$pagination.next()" ng-disabled="$pagination.disabled || !$pagination.hasNext()" aria-label="Next">\n' + '    <md-icon md-svg-icon="navigate-next.svg"></md-icon>\n' + '  </md-button>\n' + '\n' + '  <md-button class="md-icon-button" type="button" ng-if="$pagination.showBoundaryLinks()" ng-click="$pagination.last()" ng-disabled="$pagination.disabled || !$pagination.hasNext()" aria-label="Last">\n' + '    <md-icon md-svg-icon="navigate-last.svg"></md-icon>\n' + '  </md-button>\n' + '</div>');
-  }]);
+__webpack_require__(62);
 
-  angular.module('md-table-progress.html', []).run(['$templateCache', function ($templateCache) {
-    $templateCache.put('md-table-progress.html', '<tr>\n' + '  <th colspan="{{columnCount()}}">\n' + '    <md-progress-linear ng-show="deferred()" md-mode="indeterminate"></md-progress-linear>\n' + '  </th>\n' + '</tr>');
-  }]);
-
-  angular.module('arrow-up.svg', []).run(['$templateCache', function ($templateCache) {
-    $templateCache.put('arrow-up.svg', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>');
-  }]);
-
-  angular.module('navigate-before.svg', []).run(['$templateCache', function ($templateCache) {
-    $templateCache.put('navigate-before.svg', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>');
-  }]);
-
-  angular.module('navigate-first.svg', []).run(['$templateCache', function ($templateCache) {
-    $templateCache.put('navigate-first.svg', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 6 v12 h2 v-12 h-2z M17.41 7.41L16 6l-6 6 6 6 1.41-1.41L12.83 12z"/></svg>');
-  }]);
-
-  angular.module('navigate-last.svg', []).run(['$templateCache', function ($templateCache) {
-    $templateCache.put('navigate-last.svg', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 6 v12 h2 v-12 h-2z M8 6L6.59 7.41 11.17 12l-4.58 4.59L8 18l6-6z"/></svg>');
-  }]);
-
-  angular.module('navigate-next.svg', []).run(['$templateCache', function ($templateCache) {
-    $templateCache.put('navigate-next.svg', '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>');
-  }]);
-
-  angular.module('md.data.table', ['md.table.templates']);
-
-  angular.module('md.data.table').directive('mdBody', mdBody);
-
-  function mdBody() {
-
-    function compile(tElement) {
-      tElement.addClass('md-body');
-    }
-
-    return {
-      compile: compile,
-      restrict: 'A'
-    };
-  }
-
-  angular.module('md.data.table').directive('mdCell', mdCell);
-
-  function mdCell() {
-
-    function compile(tElement) {
-      var select = tElement.find('md-select');
-
-      if (select.length) {
-        select.addClass('md-table-select').attr('md-container-class', 'md-table-select');
-      }
-
-      tElement.addClass('md-cell');
-
-      return postLink;
-    }
-
-    // empty controller to be bind properties to in postLink function
-    function Controller() {}
-
-    function postLink(scope, element, attrs, ctrls) {
-      var select = element.find('md-select');
-      var cellCtrl = ctrls.shift();
-      var tableCtrl = ctrls.shift();
-
-      if (attrs.ngClick) {
-        element.addClass('md-clickable');
-      }
-
-      if (select.length) {
-        select.on('click', function (event) {
-          event.stopPropagation();
-        });
-
-        element.addClass('md-clickable').on('click', function (event) {
-          event.stopPropagation();
-          select[0].click();
-        });
-      }
-
-      cellCtrl.getTable = tableCtrl.getElement;
-
-      function getColumn() {
-        return tableCtrl.$$columns[getIndex()];
-      }
-
-      function getIndex() {
-        return Array.prototype.indexOf.call(element.parent().children(), element[0]);
-      }
-
-      scope.$watch(getColumn, function (column) {
-        if (!column) {
-          return;
-        }
-
-        if (column.numeric) {
-          element.addClass('md-numeric');
-        } else {
-          element.removeClass('md-numeric');
-        }
-      });
-    }
-
-    return {
-      controller: Controller,
-      compile: compile,
-      require: ['mdCell', '^^mdTable'],
-      restrict: 'A'
-    };
-  }
-
-  angular.module('md.data.table').directive('mdColumn', mdColumn);
-
-  function mdColumn($compile, $mdUtil) {
-
-    function compile(tElement) {
-      tElement.addClass('md-column');
-      return postLink;
-    }
-
-    function postLink(scope, element, attrs, ctrls) {
-      var headCtrl = ctrls.shift();
-      var tableCtrl = ctrls.shift();
-
-      function attachSortIcon() {
-        var sortIcon = angular.element('<md-icon md-svg-icon="arrow-up.svg">');
-
-        $compile(sortIcon.addClass('md-sort-icon').attr('ng-class', 'getDirection()'))(scope);
-
-        if (element.hasClass('md-numeric')) {
-          element.prepend(sortIcon);
-        } else {
-          element.append(sortIcon);
-        }
-      }
-
-      function detachSortIcon() {
-        Array.prototype.some.call(element.find('md-icon'), function (icon) {
-          return icon.classList.contains('md-sort-icon') && element[0].removeChild(icon);
-        });
-      }
-
-      function disableSorting() {
-        detachSortIcon();
-        element.removeClass('md-sort').off('click', setOrder);
-      }
-
-      function enableSorting() {
-        attachSortIcon();
-        element.addClass('md-sort').on('click', setOrder);
-      }
-
-      function getIndex() {
-        return Array.prototype.indexOf.call(element.parent().children(), element[0]);
-      }
-
-      function isActive() {
-        return scope.orderBy && (headCtrl.order === scope.orderBy || headCtrl.order === '-' + scope.orderBy);
-      }
-
-      function isNumeric() {
-        return attrs.mdNumeric === '' || scope.numeric;
-      }
-
-      function setOrder() {
-        scope.$applyAsync(function () {
-          if (isActive()) {
-            headCtrl.order = scope.getDirection() === 'md-asc' ? '-' + scope.orderBy : scope.orderBy;
-          } else {
-            headCtrl.order = scope.getDirection() === 'md-asc' ? scope.orderBy : '-' + scope.orderBy;
-          }
-
-          if (angular.isFunction(headCtrl.onReorder)) {
-            $mdUtil.nextTick(function () {
-              headCtrl.onReorder(headCtrl.order);
-            });
-          }
-        });
-      }
-
-      function updateColumn(index, column) {
-        tableCtrl.$$columns[index] = column;
-
-        if (column.numeric) {
-          element.addClass('md-numeric');
-        } else {
-          element.removeClass('md-numeric');
-        }
-      }
-
-      scope.getDirection = function () {
-        if (isActive()) {
-          return headCtrl.order.charAt(0) === '-' ? 'md-desc' : 'md-asc';
-        }
-
-        return attrs.mdDesc === '' || scope.$eval(attrs.mdDesc) ? 'md-desc' : 'md-asc';
-      };
-
-      scope.$watch(isActive, function (active) {
-        if (active) {
-          element.addClass('md-active');
-        } else {
-          element.removeClass('md-active');
-        }
-      });
-
-      scope.$watch(getIndex, function (index) {
-        updateColumn(index, { 'numeric': isNumeric() });
-      });
-
-      scope.$watch(isNumeric, function (numeric) {
-        updateColumn(getIndex(), { 'numeric': numeric });
-      });
-
-      scope.$watch('orderBy', function (orderBy) {
-        if (orderBy) {
-          if (!element.hasClass('md-sort')) {
-            enableSorting();
-          }
-        } else if (element.hasClass('md-sort')) {
-          disableSorting();
-        }
-      });
-    }
-
-    return {
-      compile: compile,
-      require: ['^^mdHead', '^^mdTable'],
-      restrict: 'A',
-      scope: {
-        numeric: '=?mdNumeric',
-        orderBy: '@?mdOrderBy'
-      }
-    };
-  }
-
-  mdColumn.$inject = ['$compile', '$mdUtil'];
-
-  angular.module('md.data.table').decorator('$controller', controllerDecorator).factory('$mdEditDialog', mdEditDialog);
-
-  /*
-   * A decorator for ng.$controller to optionally bind properties to the
-   * controller before invoking the constructor. Stolen from the ngMock.
-   *
-   * https://docs.angularjs.org/api/ngMock/service/$controller
-   */
-  function controllerDecorator($delegate) {
-    return function (expression, locals, later, ident) {
-      if (later && (typeof later === 'undefined' ? 'undefined' : _typeof(later)) === 'object') {
-        var create = $delegate(expression, locals, true, ident);
-        angular.extend(create.instance, later);
-        return create();
-      }
-      return $delegate(expression, locals, later, ident);
-    };
-  }
-
-  controllerDecorator.$inject = ['$delegate'];
-
-  function mdEditDialog($compile, $controller, $document, $mdUtil, $q, $rootScope, $templateCache, $templateRequest, $window) {
-    /* jshint validthis: true */
-
-    var ESCAPE = 27;
-
-    var busy = false;
-    var body = angular.element($document.prop('body'));
-
-    /*
-     * bindToController
-     * controller
-     * controllerAs
-     * locals
-     * resolve
-     * scope
-     * targetEvent
-     * template
-     * templateUrl
-     */
-    var defaultOptions = {
-      clickOutsideToClose: true,
-      disableScroll: true,
-      escToClose: true,
-      focusOnOpen: true
-    };
-
-    function build(template, options) {
-      var scope = $rootScope.$new();
-      var element = $compile(template)(scope);
-      var backdrop = $mdUtil.createBackdrop(scope, 'md-edit-dialog-backdrop');
-      var controller;
-
-      if (options.controller) {
-        controller = getController(options, scope, { $element: element, $scope: scope });
-      } else {
-        angular.extend(scope, options.scope);
-      }
-
-      if (options.disableScroll) {
-        disableScroll(element);
-      }
-
-      body.prepend(backdrop).append(element.addClass('md-whiteframe-1dp'));
-
-      positionDialog(element, options.target);
-
-      if (options.focusOnOpen) {
-        focusOnOpen(element);
-      }
-
-      if (options.clickOutsideToClose) {
-        backdrop.on('click', function () {
-          element.remove();
-        });
-      }
-
-      if (options.escToClose) {
-        escToClose(element);
-      }
-
-      element.on('$destroy', function () {
-        busy = false;
-        backdrop.remove();
-      });
-
-      return controller;
-    }
-
-    function disableScroll(element) {
-      var restoreScroll = $mdUtil.disableScrollAround(element, body);
-
-      element.on('$destroy', function () {
-        restoreScroll();
-      });
-    }
-
-    function getController(options, scope, inject) {
-      if (!options.controller) {
-        return;
-      }
-
-      if (options.resolve) {
-        angular.extend(inject, options.resolve);
-      }
-
-      if (options.locals) {
-        angular.extend(inject, options.locals);
-      }
-
-      if (options.controllerAs) {
-        scope[options.controllerAs] = {};
-
-        if (options.bindToController) {
-          angular.extend(scope[options.controllerAs], options.scope);
-        } else {
-          angular.extend(scope, options.scope);
-        }
-      } else {
-        angular.extend(scope, options.scope);
-      }
-
-      if (options.bindToController) {
-        return $controller(options.controller, inject, scope[options.controllerAs]);
-      } else {
-        return $controller(options.controller, inject);
-      }
-    }
-
-    function getTemplate(options) {
-      return $q(function (resolve, reject) {
-        var template = options.template;
-
-        function illegalType(type) {
-          reject('Unexpected template value. Expected a string; received a ' + type + '.');
-        }
-
-        if (template) {
-          return angular.isString(template) ? resolve(template) : illegalType(typeof template === 'undefined' ? 'undefined' : _typeof(template));
-        }
-
-        if (options.templateUrl) {
-          template = $templateCache.get(options.templateUrl);
-
-          if (template) {
-            return resolve(template);
-          }
-
-          var success = function success(template) {
-            return resolve(template);
-          };
-
-          var error = function error() {
-            return reject('Error retrieving template from URL.');
-          };
-
-          return $templateRequest(options.templateUrl).then(success, error);
-        }
-
-        reject('Template not provided.');
-      });
-    }
-
-    function logError(error) {
-      busy = false;
-      console.error(error);
-    }
-
-    function escToClose(element) {
-      var keyup = function keyup(event) {
-        if (event.keyCode === ESCAPE) {
-          element.remove();
-        }
-      };
-
-      body.on('keyup', keyup);
-
-      element.on('$destroy', function () {
-        body.off('keyup', keyup);
-      });
-    }
-
-    function focusOnOpen(element) {
-      $mdUtil.nextTick(function () {
-        var autofocus = $mdUtil.findFocusTarget(element);
-
-        if (autofocus) {
-          autofocus.focus();
-        }
-      }, false);
-    }
-
-    function positionDialog(element, target) {
-      var table = angular.element(target).controller('mdCell').getTable();
-
-      var getHeight = function getHeight() {
-        return element.prop('clientHeight');
-      };
-
-      var getSize = function getSize() {
-        return {
-          width: getWidth(),
-          height: getHeight()
-        };
-      };
-
-      var getTableBounds = function getTableBounds() {
-        var parent = table.parent();
-
-        if (parent.prop('tagName') === 'MD-TABLE-CONTAINER') {
-          return parent[0].getBoundingClientRect();
-        } else {
-          return table[0].getBoundingClientRect();
-        }
-      };
-
-      var getWidth = function getWidth() {
-        return element.prop('clientWidth');
-      };
-
-      var reposition = function reposition() {
-        var size = getSize();
-        var cellBounds = target.getBoundingClientRect();
-        var tableBounds = getTableBounds();
-
-        if (size.width > tableBounds.right - cellBounds.left) {
-          element.css('left', tableBounds.right - size.width + 'px');
-        } else {
-          element.css('left', cellBounds.left + 'px');
-        }
-
-        if (size.height > tableBounds.bottom - cellBounds.top) {
-          element.css('top', tableBounds.bottom - size.height + 'px');
-        } else {
-          element.css('top', cellBounds.top + 1 + 'px');
-        }
-
-        element.css('minWidth', cellBounds.width + 'px');
-      };
-
-      var watchWidth = $rootScope.$watch(getWidth, reposition);
-      var watchHeight = $rootScope.$watch(getHeight, reposition);
-
-      $window.addEventListener('resize', reposition);
-
-      element.on('$destroy', function () {
-        watchWidth();
-        watchHeight();
-
-        $window.removeEventListener('resize', reposition);
-      });
-    }
-
-    function preset(size, options) {
-
-      function getAttrs() {
-        var attrs = 'type="' + (options.type || 'text') + '"';
-
-        for (var attr in options.validators) {
-          attrs += ' ' + attr + '="' + options.validators[attr] + '"';
-        }
-
-        return attrs;
-      }
-
-      return {
-        controller: ['$element', '$q', 'save', '$scope', function ($element, $q, save, $scope) {
-          function update() {
-            if ($scope.editDialog.$invalid) {
-              return $q.reject();
-            }
-
-            if (angular.isFunction(save)) {
-              return $q.when(save($scope.editDialog.input));
-            }
-
-            return $q.resolve();
-          }
-
-          this.dismiss = function () {
-            $element.remove();
-          };
-
-          this.getInput = function () {
-            return $scope.editDialog.input;
-          };
-
-          $scope.dismiss = this.dismiss;
-
-          $scope.submit = function () {
-            update().then(function () {
-              $scope.dismiss();
-            });
-          };
-        }],
-        locals: {
-          save: options.save
-        },
-        scope: {
-          cancel: options.cancel || 'Cancel',
-          messages: options.messages,
-          model: options.modelValue,
-          ok: options.ok || 'Save',
-          placeholder: options.placeholder,
-          title: options.title,
-          size: size
-        },
-        template: '<md-edit-dialog>' + '<div layout="column" class="md-content">' + '<div ng-if="size === \'large\'" class="md-title">{{title || \'Edit\'}}</div>' + '<form name="editDialog" layout="column" ng-submit="submit(model)">' + '<md-input-container md-no-float>' + '<input name="input" ng-model="model" md-autofocus placeholder="{{placeholder}} "' + getAttrs() + '>' + '<div ng-messages="editDialog.input.$error">' + '<div ng-repeat="(key, message) in messages" ng-message="{{key}}">{{message}}</div>' + '</div>' + '</md-input-container>' + '</form>' + '</div>' + '<div ng-if="size === \'large\'" layout="row" layout-align="end" class="md-actions">' + '<md-button class="md-primary" ng-click="dismiss()">{{cancel}}</md-button>' + '<md-button class="md-primary" ng-click="submit()">{{ok}}</md-button>' + '</div>' + '</md-edit-dialog>'
-      };
-    }
-
-    this.show = function (options) {
-      if (busy) {
-        return $q.reject();
-      }
-
-      busy = true;
-      options = angular.extend({}, defaultOptions, options);
-
-      if (!options.targetEvent) {
-        return logError('options.targetEvent is required to align the dialog with the table cell.');
-      }
-
-      if (!options.targetEvent.currentTarget.classList.contains('md-cell')) {
-        return logError('The event target must be a table cell.');
-      }
-
-      if (options.bindToController && !options.controllerAs) {
-        return logError('You must define options.controllerAs when options.bindToController is true.');
-      }
-
-      options.target = options.targetEvent.currentTarget;
-
-      var promise = getTemplate(options);
-      var promises = [promise];
-
-      for (var prop in options.resolve) {
-        promise = options.resolve[prop];
-        promises.push($q.when(angular.isFunction(promise) ? promise() : promise));
-      }
-
-      promise = $q.all(promises);
-
-      promise['catch'](logError);
-
-      return promise.then(function (results) {
-        var template = results.shift();
-
-        for (var prop in options.resolve) {
-          options.resolve[prop] = results.shift();
-        }
-
-        return build(template, options);
-      });
-    };
-
-    this.small = function (options) {
-      return this.show(angular.extend({}, options, preset('small', options)));
-    }.bind(this);
-
-    this.large = function (options) {
-      return this.show(angular.extend({}, options, preset('large', options)));
-    }.bind(this);
-
-    return this;
-  }
-
-  mdEditDialog.$inject = ['$compile', '$controller', '$document', '$mdUtil', '$q', '$rootScope', '$templateCache', '$templateRequest', '$window'];
-
-  angular.module('md.data.table').directive('mdFoot', mdFoot);
-
-  function mdFoot() {
-
-    function compile(tElement) {
-      tElement.addClass('md-foot');
-    }
-
-    return {
-      compile: compile,
-      restrict: 'A'
-    };
-  }
-
-  angular.module('md.data.table').directive('mdHead', mdHead);
-
-  function mdHead($compile) {
-
-    function compile(tElement) {
-      tElement.addClass('md-head');
-      return postLink;
-    }
-
-    // empty controller to be bind scope properties to
-    function Controller() {}
-
-    function postLink(scope, element, attrs, tableCtrl) {
-      // because scope.$watch is unpredictable
-      var oldValue = new Array(2);
-
-      function addCheckboxColumn() {
-        element.children().prepend('<th class="md-column md-checkbox-column">');
-      }
-
-      function attatchCheckbox() {
-        element.prop('lastElementChild').firstElementChild.appendChild($compile(createCheckBox())(scope)[0]);
-      }
-
-      function createCheckBox() {
-        return angular.element('<md-checkbox>').attr({
-          'aria-label': 'Select All',
-          'ng-click': 'toggleAll()',
-          'ng-checked': 'allSelected()',
-          'ng-disabled': '!getSelectableRows().length'
-        });
-      }
-
-      function detachCheckbox() {
-        var cell = element.prop('lastElementChild').firstElementChild;
-
-        if (cell.classList.contains('md-checkbox-column')) {
-          angular.element(cell).empty();
-        }
-      }
-
-      function enableRowSelection() {
-        return tableCtrl.$$rowSelect;
-      }
-
-      function mdSelectCtrl(row) {
-        return angular.element(row).controller('mdSelect');
-      }
-
-      function removeCheckboxColumn() {
-        Array.prototype.some.call(element.find('th'), function (cell) {
-          return cell.classList.contains('md-checkbox-column') && cell.remove();
-        });
-      }
-
-      scope.allSelected = function () {
-        var rows = scope.getSelectableRows();
-
-        return rows.length && rows.every(function (row) {
-          return row.isSelected();
-        });
-      };
-
-      scope.getSelectableRows = function () {
-        return tableCtrl.getBodyRows().map(mdSelectCtrl).filter(function (ctrl) {
-          return ctrl && !ctrl.disabled;
-        });
-      };
-
-      scope.selectAll = function () {
-        tableCtrl.getBodyRows().map(mdSelectCtrl).forEach(function (ctrl) {
-          if (ctrl && !ctrl.isSelected()) {
-            ctrl.select();
-          }
-        });
-      };
-
-      scope.toggleAll = function () {
-        return scope.allSelected() ? scope.unSelectAll() : scope.selectAll();
-      };
-
-      scope.unSelectAll = function () {
-        tableCtrl.getBodyRows().map(mdSelectCtrl).forEach(function (ctrl) {
-          if (ctrl && ctrl.isSelected()) {
-            ctrl.deselect();
-          }
-        });
-      };
-
-      scope.$watchGroup([enableRowSelection, tableCtrl.enableMultiSelect], function (newValue) {
-        if (newValue[0] !== oldValue[0]) {
-          if (newValue[0]) {
-            addCheckboxColumn();
-
-            if (newValue[1]) {
-              attatchCheckbox();
-            }
-          } else {
-            removeCheckboxColumn();
-          }
-        } else if (newValue[0] && newValue[1] !== oldValue[1]) {
-          if (newValue[1]) {
-            attatchCheckbox();
-          } else {
-            detachCheckbox();
-          }
-        }
-
-        angular.copy(newValue, oldValue);
-      });
-    }
-
-    return {
-      bindToController: true,
-      compile: compile,
-      controller: Controller,
-      controllerAs: '$mdHead',
-      require: '^^mdTable',
-      restrict: 'A',
-      scope: {
-        order: '=?mdOrder',
-        onReorder: '=?mdOnReorder'
-      }
-    };
-  }
-
-  mdHead.$inject = ['$compile'];
-
-  angular.module('md.data.table').directive('mdRow', mdRow);
-
-  function mdRow() {
-
-    function compile(tElement) {
-      tElement.addClass('md-row');
-      return postLink;
-    }
-
-    function postLink(scope, element, attrs, tableCtrl) {
-      function enableRowSelection() {
-        return tableCtrl.$$rowSelect;
-      }
-
-      function isBodyRow() {
-        return tableCtrl.getBodyRows().indexOf(element[0]) !== -1;
-      }
-
-      function isChild(node) {
-        return element[0].contains(node[0]);
-      }
-
-      if (isBodyRow()) {
-        var cell = angular.element('<td class="md-cell">');
-
-        scope.$watch(enableRowSelection, function (enable) {
-          // if a row is not selectable, prepend an empty cell to it
-          if (enable && !attrs.mdSelect) {
-            if (!isChild(cell)) {
-              element.prepend(cell);
-            }
-            return;
-          }
-
-          if (isChild(cell)) {
-            cell.remove();
-          }
-        });
-      }
-    }
-
-    return {
-      compile: compile,
-      require: '^^mdTable',
-      restrict: 'A'
-    };
-  }
-
-  angular.module('md.data.table').directive('mdSelect', mdSelect);
-
-  function mdSelect($compile, $parse) {
-
-    // empty controller to bind scope properties to
-    function Controller() {}
-
-    function postLink(scope, element, attrs, ctrls) {
-      var self = ctrls.shift();
-      var tableCtrl = ctrls.shift();
-      var getId = $parse(attrs.mdSelectId);
-
-      self.id = getId(self.model);
-
-      if (tableCtrl.$$rowSelect && self.id) {
-        if (tableCtrl.$$hash.has(self.id)) {
-          var index = tableCtrl.selected.indexOf(tableCtrl.$$hash.get(self.id));
-
-          // if the item is no longer selected remove it
-          if (index === -1) {
-            tableCtrl.$$hash.purge(self.id);
-          }
-
-          // if the item is not a reference to the current model update the reference
-          else if (!tableCtrl.$$hash.equals(self.id, self.model)) {
-              tableCtrl.$$hash.update(self.id, self.model);
-              tableCtrl.selected.splice(index, 1, self.model);
-            }
-        } else {
-
-          // check if the item has been selected
-          tableCtrl.selected.some(function (item, index) {
-            if (getId(item) === self.id) {
-              tableCtrl.$$hash.update(self.id, self.model);
-              tableCtrl.selected.splice(index, 1, self.model);
-
-              return true;
-            }
-          });
-        }
-      }
-
-      self.isSelected = function () {
-        if (!tableCtrl.$$rowSelect) {
-          return false;
-        }
-
-        if (self.id) {
-          return tableCtrl.$$hash.has(self.id);
-        }
-
-        return tableCtrl.selected.indexOf(self.model) !== -1;
-      };
-
-      self.select = function () {
-        if (self.disabled) {
-          return;
-        }
-
-        if (tableCtrl.enableMultiSelect()) {
-          tableCtrl.selected.push(self.model);
-        } else {
-          tableCtrl.selected.splice(0, tableCtrl.selected.length, self.model);
-        }
-
-        if (angular.isFunction(self.onSelect)) {
-          self.onSelect(self.model);
-        }
-      };
-
-      self.deselect = function () {
-        if (self.disabled) {
-          return;
-        }
-
-        tableCtrl.selected.splice(tableCtrl.selected.indexOf(self.model), 1);
-
-        if (angular.isFunction(self.onDeselect)) {
-          self.onDeselect(self.model);
-        }
-      };
-
-      self.toggle = function (event) {
-        if (event && event.stopPropagation) {
-          event.stopPropagation();
-        }
-
-        return self.isSelected() ? self.deselect() : self.select();
-      };
-
-      function autoSelect() {
-        return attrs.mdAutoSelect === '' || self.autoSelect;
-      }
-
-      function createCheckbox() {
-        var checkbox = angular.element('<md-checkbox>').attr({
-          'aria-label': 'Select Row',
-          'ng-click': '$mdSelect.toggle($event)',
-          'ng-checked': '$mdSelect.isSelected()',
-          'ng-disabled': '$mdSelect.disabled'
-        });
-
-        return angular.element('<td class="md-cell md-checkbox-cell">').append($compile(checkbox)(scope));
-      }
-
-      function disableSelection() {
-        Array.prototype.some.call(element.children(), function (child) {
-          return child.classList.contains('md-checkbox-cell') && element[0].removeChild(child);
-        });
-
-        if (autoSelect()) {
-          element.off('click', toggle);
-        }
-      }
-
-      function enableSelection() {
-        element.prepend(createCheckbox());
-
-        if (autoSelect()) {
-          element.on('click', toggle);
-        }
-      }
-
-      function enableRowSelection() {
-        return tableCtrl.$$rowSelect;
-      }
-
-      function onSelectChange(selected) {
-        if (!self.id) {
-          return;
-        }
-
-        if (tableCtrl.$$hash.has(self.id)) {
-          // check if the item has been deselected
-          if (selected.indexOf(tableCtrl.$$hash.get(self.id)) === -1) {
-            tableCtrl.$$hash.purge(self.id);
-          }
-
-          return;
-        }
-
-        // check if the item has been selected
-        if (selected.indexOf(self.model) !== -1) {
-          tableCtrl.$$hash.update(self.id, self.model);
-        }
-      }
-
-      function toggle(event) {
-        scope.$applyAsync(function () {
-          self.toggle(event);
-        });
-      }
-
-      scope.$watch(enableRowSelection, function (enable) {
-        if (enable) {
-          enableSelection();
-        } else {
-          disableSelection();
-        }
-      });
-
-      scope.$watch(autoSelect, function (newValue, oldValue) {
-        if (newValue === oldValue) {
-          return;
-        }
-
-        if (tableCtrl.$$rowSelect && newValue) {
-          element.on('click', toggle);
-        } else {
-          element.off('click', toggle);
-        }
-      });
-
-      scope.$watch(self.isSelected, function (isSelected) {
-        return isSelected ? element.addClass('md-selected') : element.removeClass('md-selected');
-      });
-
-      scope.$watch(tableCtrl.enableMultiSelect, function (multiple) {
-        if (tableCtrl.$$rowSelect && !multiple) {
-          // remove all but the first selected item
-          tableCtrl.selected.splice(1);
-        }
-      });
-
-      tableCtrl.registerModelChangeListener(onSelectChange);
-
-      element.on('$destroy', function () {
-        tableCtrl.removeModelChangeListener(onSelectChange);
-      });
-    }
-
-    return {
-      bindToController: true,
-      controller: Controller,
-      controllerAs: '$mdSelect',
-      link: postLink,
-      require: ['mdSelect', '^^mdTable'],
-      restrict: 'A',
-      scope: {
-        model: '=mdSelect',
-        disabled: '=ngDisabled',
-        onSelect: '=?mdOnSelect',
-        onDeselect: '=?mdOnDeselect',
-        autoSelect: '=mdAutoSelect'
-      }
-    };
-  }
-
-  mdSelect.$inject = ['$compile', '$parse'];
-
-  angular.module('md.data.table').directive('mdTable', mdTable);
-
-  function Hash() {
-    var keys = {};
-
-    this.equals = function (key, item) {
-      return keys[key] === item;
-    };
-
-    this.get = function (key) {
-      return keys[key];
-    };
-
-    this.has = function (key) {
-      return keys.hasOwnProperty(key);
-    };
-
-    this.purge = function (key) {
-      delete keys[key];
-    };
-
-    this.update = function (key, item) {
-      keys[key] = item;
-    };
-  }
-
-  function mdTable() {
-
-    function compile(tElement, tAttrs) {
-      tElement.addClass('md-table');
-
-      if (tAttrs.hasOwnProperty('mdProgress')) {
-        var body = tElement.find('tbody')[0];
-        var progress = angular.element('<thead class="md-table-progress" md-table-progress>');
-
-        if (body) {
-          tElement[0].insertBefore(progress[0], body);
-        }
-      }
-    }
-
-    function Controller($attrs, $element, $q, $scope) {
-      var self = this;
-      var queue = [];
-      var watchListener;
-      var modelChangeListeners = [];
-
-      self.$$hash = new Hash();
-      self.$$columns = {};
-
-      function enableRowSelection() {
-        self.$$rowSelect = true;
-
-        watchListener = $scope.$watchCollection('$mdTable.selected', function (selected) {
-          modelChangeListeners.forEach(function (listener) {
-            listener(selected);
-          });
-        });
-
-        $element.addClass('md-row-select');
-      }
-
-      function disableRowSelection() {
-        self.$$rowSelect = false;
-
-        if (angular.isFunction(watchListener)) {
-          watchListener();
-        }
-
-        $element.removeClass('md-row-select');
-      }
-
-      function resolvePromises() {
-        if (!queue.length) {
-          return $scope.$applyAsync();
-        }
-
-        queue[0]['finally'](function () {
-          queue.shift();
-          resolvePromises();
-        });
-      }
-
-      function rowSelect() {
-        return $attrs.mdRowSelect === '' || self.rowSelect;
-      }
-
-      function validateModel() {
-        if (!self.selected) {
-          return console.error('Row selection: ngModel is not defined.');
-        }
-
-        if (!angular.isArray(self.selected)) {
-          return console.error('Row selection: Expected an array. Recived ' + _typeof(self.selected) + '.');
-        }
-
-        return true;
-      }
-
-      self.columnCount = function () {
-        return self.getRows($element[0]).reduce(function (count, row) {
-          return row.cells.length > count ? row.cells.length : count;
-        }, 0);
-      };
-
-      self.getRows = function (element) {
-        return Array.prototype.filter.call(element.rows, function (row) {
-          return !row.classList.contains('ng-leave');
-        });
-      };
-
-      self.getBodyRows = function () {
-        return Array.prototype.reduce.call($element.prop('tBodies'), function (result, tbody) {
-          return result.concat(self.getRows(tbody));
-        }, []);
-      };
-
-      self.getElement = function () {
-        return $element;
-      };
-
-      self.getHeaderRows = function () {
-        return self.getRows($element.prop('tHead'));
-      };
-
-      self.enableMultiSelect = function () {
-        return $attrs.multiple === '' || $scope.$eval($attrs.multiple);
-      };
-
-      self.waitingOnPromise = function () {
-        return !!queue.length;
-      };
-
-      self.queuePromise = function (promise) {
-        if (!promise) {
-          return;
-        }
-
-        if (queue.push(angular.isArray(promise) ? $q.all(promise) : $q.when(promise)) === 1) {
-          resolvePromises();
-        }
-      };
-
-      self.registerModelChangeListener = function (listener) {
-        modelChangeListeners.push(listener);
-      };
-
-      self.removeModelChangeListener = function (listener) {
-        var index = modelChangeListeners.indexOf(listener);
-
-        if (index !== -1) {
-          modelChangeListeners.splice(index, 1);
-        }
-      };
-
-      if ($attrs.hasOwnProperty('mdProgress')) {
-        $scope.$watch('$mdTable.progress', self.queuePromise);
-      }
-
-      $scope.$watch(rowSelect, function (enable) {
-        if (enable && !!validateModel()) {
-          enableRowSelection();
-        } else {
-          disableRowSelection();
-        }
-      });
-    }
-
-    Controller.$inject = ['$attrs', '$element', '$q', '$scope'];
-
-    return {
-      bindToController: true,
-      compile: compile,
-      controller: Controller,
-      controllerAs: '$mdTable',
-      restrict: 'A',
-      scope: {
-        progress: '=?mdProgress',
-        selected: '=ngModel',
-        rowSelect: '=mdRowSelect'
-      }
-    };
-  }
-
-  angular.module('md.data.table').directive('mdTablePagination', mdTablePagination);
-
-  function mdTablePagination() {
-
-    function compile(tElement) {
-      tElement.addClass('md-table-pagination');
-    }
-
-    function Controller($attrs, $mdUtil, $scope) {
-      var self = this;
-      var defaultLabel = {
-        page: 'Page:',
-        rowsPerPage: 'Rows per page:',
-        of: 'of'
-      };
-
-      self.label = angular.copy(defaultLabel);
-
-      function isPositive(number) {
-        return parseInt(number, 10) > 0;
-      }
-
-      self.eval = function (expression) {
-        return $scope.$eval(expression);
-      };
-
-      self.first = function () {
-        self.page = 1;
-        self.onPaginationChange();
-      };
-
-      self.hasNext = function () {
-        return self.page * self.limit < self.total;
-      };
-
-      self.hasPrevious = function () {
-        return self.page > 1;
-      };
-
-      self.last = function () {
-        self.page = self.pages();
-        self.onPaginationChange();
-      };
-
-      self.max = function () {
-        return self.hasNext() ? self.page * self.limit : self.total;
-      };
-
-      self.min = function () {
-        return isPositive(self.total) ? self.page * self.limit - self.limit + 1 : 0;
-      };
-
-      self.next = function () {
-        self.page++;
-        self.onPaginationChange();
-      };
-
-      self.onPaginationChange = function () {
-        if (angular.isFunction(self.onPaginate)) {
-          $mdUtil.nextTick(function () {
-            self.onPaginate(self.page, self.limit);
-          });
-        }
-      };
-
-      self.pages = function () {
-        return isPositive(self.total) ? Math.ceil(self.total / (isPositive(self.limit) ? self.limit : 1)) : 1;
-      };
-
-      self.previous = function () {
-        self.page--;
-        self.onPaginationChange();
-      };
-
-      self.showBoundaryLinks = function () {
-        return $attrs.mdBoundaryLinks === '' || self.boundaryLinks;
-      };
-
-      self.showPageSelect = function () {
-        return $attrs.mdPageSelect === '' || self.pageSelect;
-      };
-
-      $scope.$watch('$pagination.limit', function (newValue, oldValue) {
-        if (isNaN(newValue) || isNaN(oldValue) || newValue === oldValue) {
-          return;
-        }
-
-        // find closest page from previous min
-        self.page = Math.floor((self.page * oldValue - oldValue + newValue) / (isPositive(newValue) ? newValue : 1));
-        self.onPaginationChange();
-      });
-
-      $attrs.$observe('mdLabel', function (label) {
-        angular.extend(self.label, defaultLabel, $scope.$eval(label));
-      });
-
-      $scope.$watch('$pagination.total', function (newValue, oldValue) {
-        if (isNaN(newValue) || newValue === oldValue) {
-          return;
-        }
-
-        if (self.page > self.pages()) {
-          self.last();
-        }
-      });
-    }
-
-    Controller.$inject = ['$attrs', '$mdUtil', '$scope'];
-
-    return {
-      bindToController: {
-        boundaryLinks: '=?mdBoundaryLinks',
-        disabled: '=ngDisabled',
-        limit: '=mdLimit',
-        page: '=mdPage',
-        pageSelect: '=?mdPageSelect',
-        onPaginate: '=?mdOnPaginate',
-        limitOptions: '=?mdLimitOptions',
-        total: '@mdTotal'
-      },
-      compile: compile,
-      controller: Controller,
-      controllerAs: '$pagination',
-      restrict: 'E',
-      scope: {},
-      templateUrl: 'md-table-pagination.html'
-    };
-  }
-
-  angular.module('md.data.table').directive('mdTableProgress', mdTableProgress);
-
-  function mdTableProgress() {
-
-    function postLink(scope, element, attrs, tableCtrl) {
-      scope.columnCount = tableCtrl.columnCount;
-      scope.deferred = tableCtrl.waitingOnPromise;
-    }
-
-    return {
-      link: postLink,
-      require: '^^mdTable',
-      restrict: 'A',
-      scope: {},
-      templateUrl: 'md-table-progress.html'
-    };
-  }
-
-  angular.module('md.data.table').directive('virtualPageSelect', virtualPageSelect);
-
-  function virtualPageSelect() {
-
-    function Controller($element, $scope) {
-      var self = this;
-      var content = $element.find('md-content');
-
-      self.pages = [];
-
-      function getMin(pages, total) {
-        return Math.min(pages, isFinite(total) && isPositive(total) ? total : 1);
-      }
-
-      function isPositive(number) {
-        return number > 0;
-      }
-
-      function setPages(max) {
-        if (self.pages.length > max) {
-          return self.pages.splice(max);
-        }
-
-        for (var i = self.pages.length; i < max; i++) {
-          self.pages.push(i + 1);
-        }
-      }
-
-      content.on('scroll', function () {
-        if (content.prop('clientHeight') + content.prop('scrollTop') >= content.prop('scrollHeight')) {
-          $scope.$applyAsync(function () {
-            setPages(getMin(self.pages.length + 10, self.total));
-          });
-        }
-      });
-
-      $scope.$watch('$pageSelect.total', function (total) {
-        setPages(getMin(Math.max(self.pages.length, 10), total));
-      });
-
-      $scope.$watch('$pagination.page', function (page) {
-        for (var i = self.pages.length; i < page; i++) {
-          self.pages.push(i + 1);
-        }
-      });
-    }
-
-    Controller.$inject = ['$element', '$scope'];
-
-    return {
-      bindToController: {
-        total: '@'
-      },
-      controller: Controller,
-      controllerAs: '$pageSelect'
-    };
-  }
-})(window, angular);
-
-/***/ }),
-/* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// support for Browserify
-
-__webpack_require__(27);
-__webpack_require__(99);
-
-module.exports = 'md.data.table';
-
-/***/ }),
-/* 101 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+__webpack_require__(65);
 
 /***/ })
-],[95]);
+],[99]);

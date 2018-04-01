@@ -18891,3 +18891,7 @@ table.md-table td.md-cell md-select > .md-select-value > span.md-select-icon:aft
   font-size: 0.8em;
   text-align: left;
   width: 100%; }
+
+  .active{
+    color:red !important;
+  }

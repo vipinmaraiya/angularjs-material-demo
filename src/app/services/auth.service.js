@@ -1,11 +1,12 @@
 export class AuthService{
-    constructor(){
-
+    constructor(state){
+        this.state = state;
     }
     isAuthenticated(){
-        return new Promise((resolve, reject) =>{
-            resolve("Access Denied from service");
-        });
+        if(false)
+        this.state.go("accessdenied")
     }
 }
+
+AuthService.$inject = ["$state"];
 

@@ -5,7 +5,7 @@ export class AppService{
 
     getUsers(callback){
         this.http.get("/api/users").then((result)=>{
-            callback(result.data);
+            return result.data;
         });
     }
 }
