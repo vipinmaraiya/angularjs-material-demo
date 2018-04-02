@@ -31,7 +31,14 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
             url: '/user',
             templateUrl: "views/users.html", 
             controller: 'userController',
-            controllerAs: 'user' 
+            controllerAs: 'user' ,
+            resolve: {
+              authorize: ['authService',
+                function(authService) {
+                  return authService.isAuthenticated();
+                }
+              ]
+            }
         }).state("userById", {
           url:"/user/{id}",
           templateUrl:"views/user.html"

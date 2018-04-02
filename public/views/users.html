@@ -1,37 +1,41 @@
 <div>
         <a ui-sref="login">Home
         </a>
-        {{user.app}}
-        {{user.userdata}}
-        <md-toolbar class="md-table-toolbar md-default">
-                <div class="md-toolbar-tools">
-                  <span>Nutrition</span>
-                </div>
-              </md-toolbar>
-    <md-table-container>
-            <table md-table ng-model="user.selected" md-progress="promise">
-              <thead md-head md-order="user.query.order"
-               >
-                <tr md-row>
-                  <th md-column md-order-by="nameToLower">Name</th>
-                  <th md-column md-order-by="company">Company</th>
-                </tr>
-              </thead>
-              <tbody md-body>
-                <tr md-row md-select="user" md-select-id="name" md-auto-select 
-                ng-repeat="user in user.users">
-                  <td md-cell>{{user.name}}</td>
-                  <td md-cell>{{user.company}}</td>
-                </tr>
-              </tbody>
-            </table>
-          </md-table-container>
-           
-          <md-table-pagination md-limit="2" 
-          md-limit-options="[5, 10, 15]" md-page="user.query.page" 
-          md-total="{{user.users.length}}" 
-          md-page-select></md-table-pagination>
 
+        <!-- <md-list class="fixedRows">
+          <md-subheader class="md-no-sticky">Contacts</md-subheader>
+          <md-list-item class="md-2-line contact-item" ng-repeat="(index, contact) in user.allContacts"
+              ng-if="user.contacts.indexOf(contact) < 0">
+
+            <div class="md-list-item-text compact">
+              <h3>{{contact.name}}</h3>
+              <p>{{contact.email}}</p>
+            </div>
+          </md-list-item>
+          <md-list-item class="md-2-line contact-item selected" ng-repeat="(index, contact) in user.contacts">
+            <div class="md-list-item-text compact">
+              <h3>{{contact.name}}</h3>
+              <p>{{contact.email}}</p>
+            </div>
+          </md-list-item>
+        </md-list> -->
+
+
+      <md-content>
+        <md-contact-chips
+        ng-model="user.asyncContacts"
+        md-contacts="user.delayedQuerySearch($query)"
+        md-contact-name="name"
+        md-contact-email="email"
+        md-require-match="true"
+        md-highlight-flags="i"
+        filter-selected="user.filterSelected"
+        placeholder="Members">
+    </md-contact-chips>
+  </md-content>
+  {{user.asyncContacts}}
+
+      
            
 
 </div>

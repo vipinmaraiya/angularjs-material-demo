@@ -3755,7 +3755,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     url: '/user',
     templateUrl: "views/users.html",
     controller: 'userController',
-    controllerAs: 'user'
+    controllerAs: 'user',
+    resolve: {
+      authorize: ['authService', function (authService) {
+        return authService.isAuthenticated();
+      }]
+    }
   }).state("userById", {
     url: "/user/{id}",
     templateUrl: "views/user.html"
@@ -7703,12 +7708,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var UserController = exports.UserController = function () {
-    function UserController(appService, stateParams) {
+    function UserController(appService, stateParams, timeout) {
         _classCallCheck(this, UserController);
 
         this.appService = appService;
@@ -7716,52 +7719,54 @@ var UserController = exports.UserController = function () {
         this.selected = [];
         this.name = "user controller";
 
-        this.getUsers();
-        this.query = {
-            order: 'name',
-            limit: 5,
-            page: 1
-        };
+        this.timeout = timeout;
+        this.allContacts = this.loadContacts();
+        this.contacts = [this.allContacts[0]];
+
+        this.asyncContacts = [];
+        this.filterSelected = true;
     }
 
     _createClass(UserController, [{
-        key: "getUsers",
-        value: function () {
-            var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-                var data;
-                return regeneratorRuntime.wrap(function _callee$(_context) {
-                    while (1) {
-                        switch (_context.prev = _context.next) {
-                            case 0:
-                                _context.next = 2;
-                                return this.appService.getUsers();
+        key: "delayedQuerySearch",
+        value: function delayedQuerySearch(criteria) {
+            var _this = this;
 
-                            case 2:
-                                data = _context.sent;
+            return new Promise(function (resolve, reject) {
+                _this.timeout(function () {
+                    var lowercaseQuery = criteria.toLowerCase();
+                    var filteredData = criteria ? _this.allContacts.filter(function filterFn(contact) {
+                        return contact.name.toLowerCase().indexOf(lowercaseQuery) !== -1;
+                    }) : [];
+                    resolve(filteredData);
+                }, 300, true);
+            });
+        }
+    }, {
+        key: "loadContacts",
+        value: function loadContacts() {
+            var contacts = [{
+                userId: 1,
+                name: "Renu Sharma <renu.shrama@epsilon.com>",
+                email: "renu.shrama@epsilon.com"
+            }, {
+                userId: 2,
+                name: "Ashish Sharma <ashish.shrama@epsilon.com>",
+                email: "ashish.shrama@epsilon.com"
+            }, {
+                userId: 3,
+                name: "Vipin Sharma <vipin.shrama@epsilon.com>",
+                email: "vipin.shrama@epsilon.com"
+            }];
 
-                                this.userdata = data.data;
-                                console.log(this);
-
-                            case 5:
-                            case "end":
-                                return _context.stop();
-                        }
-                    }
-                }, _callee, this);
-            }));
-
-            function getUsers() {
-                return _ref.apply(this, arguments);
-            }
-
-            return getUsers;
-        }()
+            return contacts;
+        }
     }]);
 
     return UserController;
 }();
 
-UserController.$inject = ["appService", "$stateParams"];
+UserController.$inject = ["appService", "$stateParams", "$timeout"];
 
 /***/ }),
 
