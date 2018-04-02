@@ -7,9 +7,8 @@ export class UserController{
 
         this.timeout = timeout;
         this.allContacts = this.loadContacts();
-        this.contacts = [this.allContacts[0]];
-
         this.asyncContacts = [];
+        this.asyncContacts =  [this.allContacts[0]];
         this.filterSelected = true;
 
 
