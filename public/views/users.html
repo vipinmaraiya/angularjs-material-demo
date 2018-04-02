@@ -1,43 +1,46 @@
 <div>
         <a ui-sref="login">Home
         </a>
-
-        <!-- <md-list class="fixedRows">
-          <md-subheader class="md-no-sticky">Contacts</md-subheader>
-          <md-list-item class="md-2-line contact-item" ng-repeat="(index, contact) in user.allContacts"
-              ng-if="user.contacts.indexOf(contact) < 0">
-
-            <div class="md-list-item-text compact">
-              <h3>{{contact.name}}</h3>
-              <p>{{contact.email}}</p>
-            </div>
-          </md-list-item>
-          <md-list-item class="md-2-line contact-item selected" ng-repeat="(index, contact) in user.contacts">
-            <div class="md-list-item-text compact">
-              <h3>{{contact.name}}</h3>
-              <p>{{contact.email}}</p>
-            </div>
-          </md-list-item>
-        </md-list> -->
-
-
-      <md-content>
-        <md-contact-chips
-        ng-model="user.asyncContacts"
-        md-contacts="user.delayedQuerySearch($query)"
-        md-contact-name="name"
-        md-contact-email="email"
-        md-require-match="true"
-        md-highlight-flags="i"
-        md-min-length = 3
-        secondary-placeholder="Members"
-        filter-selected="user.filterSelected"
-        placeholder="Members">
-    </md-contact-chips>
-  </md-content>
+        <form name="searchForm">
+          <md-autocomplete flex required
+          md-input-name="autocompleteField"
+          md-no-cache="user.noCache"
+          md-selected-item="user.selectedItem.name"
+          md-search-text="user.searchText"
+          md-items="item in user.delayedQuerySearch(user.searchText)"
+          md-item-text="item.name"
+          md-require-match
+          md-floating-label="Manager">
+        <md-item-template>
+          <span md-highlight-text="user.searchText">{{item.name}}</span>
+        </md-item-template>
+        <div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">
+          <div ng-message="required">You <b>must</b> have a user.</div>
+          <div ng-message="md-require-match">Please select an user.</div>
+        </div>
+      </md-autocomplete>
+  
+        <md-content>
+          <md-contact-chips
+          ng-model="user.asyncContacts"
+          md-contacts="user.delayedQuerySearch($query)"
+          md-contact-name="name"
+          md-contact-email="email"
+          md-require-match="true"
+          md-highlight-flags="i"
+          md-min-length = 3
+          secondary-placeholder="Members"
+          filter-selected="user.filterSelected"
+          placeholder="Members">
+      </md-contact-chips>
+    </md-content>
+        </form>
+  
   {{user.asyncContacts}}
 
-      
+  <!-- <div layout="row" layout-sm="column" layout-align="space-around">
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+  </div> -->
            
 
 </div>

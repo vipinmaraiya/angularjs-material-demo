@@ -10,9 +10,6 @@ export class UserController{
         this.asyncContacts = [];
         this.asyncContacts =  [this.allContacts[0]];
         this.filterSelected = true;
-
-
-
     }
 
 
